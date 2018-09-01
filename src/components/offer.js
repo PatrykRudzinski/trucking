@@ -39,9 +39,14 @@ const OfferArticles = styled.section`
     justify-content: space-between;
     flex-wrap: wrap;
 `
+const icons = [
+    'contract',
+    'freight',
+    'storage',
+    'consulting',
+]
 
-
-export default () => (
+export default (props) => (
     <section>
         <Container>
             <Header>
@@ -49,22 +54,12 @@ export default () => (
                 <h3>Tailored logistics services</h3>
             </Header>
             <OfferArticles>
-                <OfferArticle icon={'contract'}>
-                    <h4>Contract logistics</h4>
-                    <p>Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!</p>
-                </OfferArticle>
-                <OfferArticle icon={'freight'}>
-                    <h4>Overland, Ocean and Air Freight</h4>
-                    <p>Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!</p>
-                </OfferArticle>
-                <OfferArticle icon={'storage'}>
-                    <h4>Warehousing and Storage</h4>
-                    <p>Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!</p>
-                </OfferArticle>
-                <OfferArticle icon={'consulting'}>
-                    <h4>Consulting Services</h4>
-                    <p>Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!</p>
-                </OfferArticle>
+            {props.data.map( (e, i) => {
+                        return <OfferArticle key={e.node.order} icon={icons[i]}>
+                            <h4>{e.node.title}</h4>
+                            <p>{e.node.desc}</p>
+                        </OfferArticle>
+                    })}
             </OfferArticles>
         </Container>
     </section>

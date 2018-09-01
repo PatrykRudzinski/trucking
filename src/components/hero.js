@@ -1,3 +1,19 @@
+// import React from 'react'
+// import Img from 'gatsby-image'
+
+// import styles from './hero.module.css'
+
+// export default ({ data }) => (
+//   <div className={styles.hero}>
+//     <Img className={styles.heroImage} alt={data.name} sizes={data.heroImage.sizes} />
+//     <div className={styles.heroDetails}>
+//       <h3 className={styles.heroHeadline}>{data.name}</h3>
+//       <p className={styles.heroTitle}>{data.title}</p>
+//       <p>{data.shortBio.shortBio}</p>
+//     </div>
+//   </div>
+// )
+
 import React from 'react'
 import styled from 'styled-components'
 import Slider from './hero/slider'
@@ -30,24 +46,18 @@ const Button = styled.button`
 `
 
 
-export default () => (
+export default (props) => (
         <section>
             <Slider/>
             <Articles>
                 <FlexContainer>
-                    <Article active>
-                        <h4>Overland network</h4>
-                        <p>We have a wide experience in overland industry specific logistic solutions like farmaceutical logistics, retail and automotive logistics by train or road.</p>
-                    </Article>
-                    <Article >
-                        <h4>Ocean freight</h4>
-                        <p>We bring your goods safely to worldwide destinations with our great sea fright services. We offer LLC and FLC shipments that are fast and effective with no delays.
-                        </p>
-                    </Article>
-                    <Article >
-                        <h4>Air freight</h4>
-                        <p>We provide full supply chain management package including cost effective and fast sea freight. You can also combine this package with other means of transportation.</p>
-                    </Article>
+                    {props.data.map( e => {
+                        return <Article key={e.node.order}>
+                            <h4>{e.node.title}</h4>
+                            <p>{e.node.summary}</p>
+
+                        </Article>
+                    })}
                 </FlexContainer>
                 <Button>View details</Button>
             </Articles>

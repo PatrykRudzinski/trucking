@@ -15,7 +15,7 @@ const Search = styled.span`
 
 export default () => (
     <Search>
-        <img src="./static/icons/search.png" alt="search icon"/>
+        <img src="./icons/search.png" alt="search icon"/>
     </Search>
 )
 

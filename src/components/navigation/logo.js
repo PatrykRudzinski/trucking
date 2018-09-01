@@ -31,7 +31,7 @@ const Logo = styled(Link)`
 
 export default () => (
       <Logo to='/'>
-          <img src="./static/icons/logo.png" alt="Company Logo"/>
+          <img src="./icons/logo.png" alt="Company Logo"/>
           <div>
               <p>Trucking</p>
               <p>Logistics & Transportation</p>

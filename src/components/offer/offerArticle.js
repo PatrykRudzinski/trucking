@@ -35,7 +35,7 @@ const Icon = styled.div`
     align-items: center;
 
     div {
-        background: url('./static/icons/icons.png') no-repeat top left; height: 70px;
+        background: url('./icons/icons.png') no-repeat top left; height: 70px;
         background-position: ${props => iconsPositions[props.icon]};
     }
 `
