@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
 import Container from '../components/common/container'
 import Navigation from '../components/navigation'
@@ -45,6 +46,7 @@ class Template extends React.Component {
 
     return (
       <div>
+      <Helmet title={`Trucking`} />
       <SectionNavigation>
         <Container>
           <Navigation />
