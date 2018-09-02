@@ -51,11 +51,10 @@ export default (props) => (
             <Slider/>
             <Articles>
                 <FlexContainer>
-                    {props.data.map( e => {
-                        return <Article key={e.node.order}>
+                    {props.data.map( (e, i) => {
+                        return <Article key={i}>
                             <h4>{e.node.title}</h4>
-                            <p>{e.node.summary}</p>
-
+                            <p>{e.node.summary.summary}</p>
                         </Article>
                     })}
                 </FlexContainer>

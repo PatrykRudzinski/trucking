@@ -28,17 +28,20 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          desc
+          desc{ 
+            desc
+          }
           order
         }
       }
     }
-    allContentfulArticle(sort: { fields: [order], order: ASC}){
-      edges {
-        node {
+    allContentfulArticle(limit:3, sort: { fields: [createdAt], order: DESC}) {
+      edges{
+        node{
           title
-          summary
-          order
+          summary{
+            summary
+          }
         }
       }
     }

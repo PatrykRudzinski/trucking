@@ -57,7 +57,7 @@ export default (props) => (
             {props.data.map( (e, i) => {
                         return <OfferArticle key={e.node.order} icon={icons[i]}>
                             <h4>{e.node.title}</h4>
-                            <p>{e.node.desc}</p>
+                            <p>{e.node.desc.desc}</p>
                         </OfferArticle>
                     })}
             </OfferArticles>

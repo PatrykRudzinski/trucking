@@ -14,7 +14,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               edges {
                 node {
                   title
-                  desc
+                  desc{
+                    desc
+                  }
                   order
                 }
               }
@@ -23,8 +25,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               edges {
                 node {
                   title
-                  summary
-                  order
+                  summary{
+                    summary
+                  }
+                  content {
+                    content
+                  }
                 }
               }
             }
