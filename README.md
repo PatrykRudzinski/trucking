@@ -1,4 +1,4 @@
-# Simple React SSR site with CMS
+# Simple React SSR blog with CMS
 
 Created with:
 * [Gatsby](http://gatsbyjs.com/) 
